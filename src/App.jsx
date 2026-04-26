@@ -1,12 +1,35 @@
-import { useState } from 'react'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavBar from "./components/Navbar";
+
+import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
+import Skills from "./pages/Skills.jsx";
+import Projects from "./pages/Projects.jsx";
+import { useEffect } from "react";
+import { SHEET_URL } from "./utils/config.js";
+import { useDispatch } from "react-redux";
+import { fetchPortfolioData } from "./utils/actions.js";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+
+    dispatch(fetchPortfolioData(SHEET_URL));
+  }, [dispatch]);
 
   return (
-    <>heloo</>
-  )
+    <Router>
+      <NavBar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Projects />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

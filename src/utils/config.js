@@ -1,0 +1,2 @@
+// src/config.js
+export const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSmVwx8piB2WMSP-cwSZ3JwDGSValcbcYOBo2Iu-zspNnoDfgb-ydVlLFBLjmBRT0EsDeMK0MkXzeoK/pub?gid=0&single=true&output=csv";
