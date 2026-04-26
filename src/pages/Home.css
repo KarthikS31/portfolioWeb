@@ -1,0 +1,178 @@
+.hero-blob-wrapper {
+  position: absolute;
+  top: -200px;
+  right: -80px;
+  width: 44%;
+  aspect-ratio: 1 / 1.2;
+  border-radius: 42% 58% 35% 65% / 55% 38% 62% 45%;
+  overflow: hidden;
+  z-index: 1;
+  animation: blobMorph 8s ease-in-out infinite;
+  /* NO background color here */
+}
+.hero-blob-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom left,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+@keyframes blobMorph {
+  0%   { border-radius: 42% 58% 35% 65% / 55% 38% 62% 45%; }
+  25%  { border-radius: 55% 45% 62% 38% / 40% 60% 35% 65%; }
+  50%  { border-radius: 38% 62% 50% 50% / 60% 42% 58% 38%; }
+  75%  { border-radius: 60% 40% 38% 62% / 45% 55% 42% 58%; }
+  100% { border-radius: 42% 58% 35% 65% / 55% 38% 62% 45%; }
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  pointer-events: none;
+}
+
+/* 🎨 Soft theme glow (matches your indigo UI) */
+.home::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -120px;
+  width: 600px;
+  height: 600px;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(79, 70, 229, 0.35) 0%,
+    rgba(79, 70, 229, 0.15) 40%,
+    rgba(79, 70, 229, 0.05) 70%,
+    transparent 100%
+  );
+
+  border-radius: 60% 40% 50% 70%;
+  filter: blur(50px);
+  z-index: 0;
+}
+/* HERO SECTION - UNCHANGED */
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  opacity: 30%;
+}
+
+.home-container {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  width: 100%;
+  max-width: 1126px;
+  padding: 0 40px;
+}
+
+.welcome {
+  letter-spacing: 6px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.home h2 {
+  font-size: 2.5rem;
+}
+
+.home span {
+  color: #4f46e5;
+}
+
+.home p {
+  margin-top: 15px;
+  color: #aaa;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.home-buttons {
+  margin-top: 25px;
+}
+
+.home-buttons a {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border: 1px solid #4f46e5;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 0.3s;
+  font-size: 0.9rem;
+}
+
+.home-buttons a:hover {
+  background: #4f46e5;
+}
+
+/* CONTACT SECTION - ADDED NEW STYLES */
+.contact {
+  width: 100%;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact h2 {
+  margin-bottom: 10px;
+}
+
+.connect-text {
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #4f46e5;
+  transform: translateY(-3px);
+}
+
+.contact-details p {
+  color: #aaa;
+  margin: 5px 0;
+  font-size: 0.9rem;
+}

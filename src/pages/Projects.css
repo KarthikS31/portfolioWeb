@@ -1,0 +1,83 @@
+.projects-section {
+  /* Increased top padding to move it down from the header */
+  padding: 100px 20px 40px 20px; 
+  background: transparent; 
+  color: inherit; 
+}
+
+.projects-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  /* Added margin-top for extra clearance if needed */
+  margin-top: 20px; 
+}
+
+/* SECTION HEADER - Small and subtle */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #888;
+  margin: 0 0 30px 0;
+  font-size: 0.85rem !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.section-title i {
+  color: #4f46e5;
+  font-size: 0.8rem;
+}
+
+/* GRID LAYOUT */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* CARD DESIGN - Flat, no elevation */
+.project-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* HOVER EFFECT - Just a highlight */
+.project-card:hover {
+  background: rgba(79, 70, 229, 0.08); 
+  border-color: #4f46e5; 
+}
+
+.project-name {
+  font-size: 1rem;
+  color: #eee;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.project-desc {
+  font-size: 0.85rem;
+  color: #777;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* TECH BADGES */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech-badge {
+  font-size: 0.65rem;
+  color: #4f46e5;
+  background: rgba(79, 70, 229, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+}
