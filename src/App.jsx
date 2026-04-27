@@ -19,7 +19,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <Router>
+    <Router basename="/portfolioWeb">
       <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
         <NavBar />
 
