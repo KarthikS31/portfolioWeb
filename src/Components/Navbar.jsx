@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
@@ -15,13 +16,13 @@ function Navbar() {
   return (
     <nav className={scrolled ? "navbar scrolled" : "navbar"}>
       <div className="nav-container">
-        <a href="/" className="logo logo-blue">SK</a>
+        <NavLink to="/" className="logo logo-blue">SK</NavLink>
         
         <div className="nav-links nav-menu">
-          <a href="/"><i className="pi pi-home"></i> Home</a>
-          <a href="/about"><i className="pi pi-user"></i> About</a>
-          <a href="/skills"><i className="pi pi-code"></i> Skills</a>
-          <a href="/projects"><i className="pi pi-briefcase"></i> Projects</a>
+          <NavLink to="/"><i className="pi pi-home"></i> Home</NavLink>
+          <NavLink to="/about"><i className="pi pi-user"></i> About</NavLink>
+          <NavLink to="/skills"><i className="pi pi-code"></i> Skills</NavLink>
+          <NavLink to="/projects"><i className="pi pi-briefcase"></i> Projects</NavLink>
         </div>
       </div>
     </nav>
