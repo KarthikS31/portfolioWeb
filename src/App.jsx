@@ -1,6 +1,6 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/Navbar";
-import Footer from "./components/Footer"; // ← add this
+import Footer from "./components/Footer";
 
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
@@ -19,7 +19,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <Router basename="/portfolioWeb">
+    <Router>
       <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
         <NavBar />
 
