@@ -1,18 +1,69 @@
-# React + Vite
+# Portfolio — KarthikS31
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website built with React, showcasing my skills, projects, and experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<img width="1895" height="815" alt="image" src="https://github.com/user-attachments/assets/c9456132-2a1f-4cdc-8146-0f9e1c919e1c" />
 
-## React Compiler
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Tech Stack
 
-Note: This will impact Vite dev & build performances.
+- **React** — UI library
+- **Redux** — state management
+- **Vite** — build tool
+- **CSS** — custom styling
+- **GitHub Pages** — deployment
 
-## Expanding the ESLint configuration
+## Pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Home** — introduction and overview
+- **About** — background and experience
+- **Skills** — technical skills
+- **Projects** — work and projects
+
+## Data Source — Google Sheets
+
+All portfolio content (skills, projects, etc.) is fetched dynamically from a Google Sheet via Redux actions.
+
+To understand how the data fetching works, refer to `src/utils/actions.js` — it fetches data from a published Google Sheet URL defined in `src/utils/config.js`.
+
+### Setting up your own Google Sheet
+
+1. Create a Google Sheet with your portfolio data
+2. Go to **File → Share → Publish to web**
+3. Select the sheet and choose **CSV** format, then click **Publish**
+4. Copy the published URL and paste it in `src/utils/config.js`:
+
+```js
+export const SHEET_URL = "your_published_google_sheet_url";
+```
+
+5. Make sure your sheet columns match what the actions expect — check `src/utils/actions.js` for the exact structure
+
+## Getting Started
+
+```bash
+# Clone the repo
+git clone https://github.com/KarthikS31/portfolioWeb.git
+cd portfolioWeb
+
+# Install dependencies
+npm install
+
+# Run locally
+npm run dev
+```
+
+## Deployment
+
+The site is deployed via GitHub Pages using:
+
+```bash
+npm run build
+npm run deploy
+```
+
+## License
+
+MIT © KarthikS31
