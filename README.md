@@ -4,7 +4,7 @@ A personal portfolio website built with React, showcasing my skills, projects, a
 
 ---
 
-<img width="1895" height="815" alt="image" src="https://github.com/user-attachments/assets/c9456132-2a1f-4cdc-8146-0f9e1c919e1c" />
+<img width="1889" height="861" alt="image" src="https://github.com/user-attachments/assets/318752dd-746a-4cc3-a9ca-c537f8a70366" />
 
 
 ## Tech Stack
