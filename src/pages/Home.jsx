@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useSelector } from 'react-redux';
 import "./Home.css";
 import profileImg from "../assets/Profile-img.jpeg";
@@ -6,17 +6,35 @@ import Loader from '../Components/Loader';
 
 function Home() {
   const { social, about, loading } = useSelector((state) => state.portfolio);
+  const sectionRef = useRef(null);
+
+  // Tracks mouse movement smoothly across the whole screen
+  const handleMouseMove = (e) => {
+    if (sectionRef.current) {
+      const rect = sectionRef.current.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      // Apply coordinates globally to the section so children can inherit them
+      sectionRef.current.style.setProperty('--x', `${x}px`);
+      sectionRef.current.style.setProperty('--y', `${y}px`);
+    }
+  };
 
   if (loading) return <Loader />;
+  
   return (
     <>
       {/* HERO SECTION */}
-      <section className="home">
-        <div className="overlay"></div>
-
-        <div className="hero-blob-wrapper">
+      <section className="home" ref={sectionRef} onMouseMove={handleMouseMove}>
+        
+        {/* Fullscreen background with spotlight mask */}
+        <div className="hero-bg-wrapper">
           <img src={profileImg} alt="profile" className="hero-image" />
         </div>
+        
+        <div className="overlay"></div>
+        
         <div className="home-container">
           <h1 className="welcome">WELCOME</h1>
 
@@ -24,7 +42,6 @@ function Home() {
             Hi, I'm <span>Karthik</span>
           </h2>
 
-          {/* ✅ fixed valid structure */}
           <h4>Frontend Developer (React) & Java Developer.</h4>
           <p>{about?.summary}</p>
 
