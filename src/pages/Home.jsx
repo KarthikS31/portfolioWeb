@@ -6,29 +6,33 @@ import Loader from '../Components/Loader';
 
 function Home() {
   const { social, about, loading } = useSelector((state) => state.portfolio);
+  
   const sectionRef = useRef(null);
+  
+  const contactRef = useRef(null);
 
-  // Tracks mouse movement smoothly across the whole screen
   const handleMouseMove = (e) => {
     if (sectionRef.current) {
       const rect = sectionRef.current.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
       
-      // Apply coordinates globally to the section so children can inherit them
       sectionRef.current.style.setProperty('--x', `${x}px`);
       sectionRef.current.style.setProperty('--y', `${y}px`);
     }
+  };
+
+  const scrollToContact = (e) => {
+    e.preventDefault(); 
+    contactRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   if (loading) return <Loader />;
   
   return (
     <>
-      {/* HERO SECTION */}
       <section className="home" ref={sectionRef} onMouseMove={handleMouseMove}>
         
-        {/* Fullscreen background with spotlight mask */}
         <div className="hero-bg-wrapper">
           <img src={profileImg} alt="profile" className="hero-image" />
         </div>
@@ -50,13 +54,14 @@ function Home() {
               Resume
             </a>
 
-            <a href="#contact">Contact Me</a>
+            <a href="#contact" onClick={scrollToContact}>
+              Contact Me
+            </a>
           </div>
         </div>
       </section>
 
-      {/* CONTACT SECTION */}
-      <section id="contact" className="contact">
+      <section id="contact" className="contact" ref={contactRef}>
         <h2>Contact Me</h2>
         <p className="connect-text">Feel free to connect with me!</p>
 
