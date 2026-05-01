@@ -1,11 +1,33 @@
-# Portfolio — KarthikS31
+<h1 align="center">Portfolio — KarthikS31</h1>
 
-A personal portfolio website built with React, showcasing my skills, projects, and experience.
+<p align="center">
+  A personal portfolio website built with React, showcasing my skills, projects, and experience.
+</p>
+
+<p align="center">
+  <a href="https://karthiks31.github.io/portfolioWeb/#/"><strong>🌐 View Live Website</strong></a>
+</p>
+
+<br/>
+
+<p align="center">
+  <img width="1000" alt="Portfolio Preview" src="https://github.com/user-attachments/assets/318752dd-746a-4cc3-a9ca-c537f8a70366" />
+</p>
+
+<br/>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Built_with-React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="Built with React">
+  <img src="https://img.shields.io/badge/State-Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white" alt="Redux">
+  <img src="https://img.shields.io/badge/Tooling-Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
+  <img src="https://img.shields.io/badge/Deployed_on-GitHub_Pages-222222?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages">
+</p>
+
+<p align="center">
+  🔹 <a href="https://github.com/KarthikS31/portfolioWeb/issues">Report Bug</a> &nbsp;&nbsp;&nbsp; 🔹 <a href="https://github.com/KarthikS31/portfolioWeb/issues">Request Feature</a>
+</p>
 
 ---
-
-<img width="1889" height="861" alt="image" src="https://github.com/user-attachments/assets/318752dd-746a-4cc3-a9ca-c537f8a70366" />
-
 
 ## Tech Stack
 
