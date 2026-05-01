@@ -64,6 +64,6 @@ npm run build
 npm run deploy
 ```
 
-## License
+## Show me your support
 
-MIT © KarthikS31
+Give a ⭐ if you like this website!
