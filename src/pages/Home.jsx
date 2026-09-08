@@ -46,7 +46,7 @@ function Home() {
             Hi, I'm <span>Karthik</span>
           </h2>
 
-          <h4>Frontend Developer (React) & Java Developer.</h4>
+          <h4>Frontend focused fullstack developer</h4>
           <p>{about?.summary}</p>
 
           <div className="home-buttons">
