@@ -43,7 +43,7 @@ function Home() {
           <h1 className="welcome">WELCOME</h1>
 
           <h2>
-            Hi, I'm <span>Karthik</span>
+            Hi, I'm <span>Karthik S</span>
           </h2>
 
           <h4>Frontend focused fullstack developer</h4>
