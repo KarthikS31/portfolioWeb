@@ -14,7 +14,11 @@ export default defineConfig([
       reactRefresh.configs.vite,
     ],
     languageOptions: {
-      globals: globals.browser,
+      // Use the ... spread operator to merge both globals objects into one
+      globals: {
+        ...globals.browser,
+        ...globals.jest,
+      },
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
   },
